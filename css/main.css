@@ -1,3 +1,243 @@
+:root {
+  --red: tomato;
+  --gray: #ccc;
+  --blueScreen: #1b2631; }
 
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #5d6d7e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px;
+  font-family: "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px; }
+
+h1 {
+  color: var(--gray);
+  font-size: 40px;
+  padding: 40px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-weight: 100; }
+
+.apple-watch {
+  background: #e2e2e2;
+  width: 230px;
+  height: 269px;
+  border-radius: 43px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #bcbcbc;
+  position: relative;
+  margin-right: 13px; }
+
+.apple-watch::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 41px;
+  border-radius: 45% 7px 7px 45%;
+  position: absolute;
+  right: -13px;
+  top: 62px;
+  background: #e2e2e2;
+  border: 1px solid #bcbcbc; }
+
+.apple-watch::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 67px;
+  border-radius: 8px 3px 3px 8px;
+  position: absolute;
+  right: -5px;
+  top: 140px;
+  background: #e2e2e2;
+  border: 1px solid #bcbcbc; }
+
+.apple-watch__screen {
+  background: var(--blueScreen);
+  height: 100%;
+  border-radius: 35px;
+  box-sizing: border-box;
+  padding: 28px;
+  overflow: hidden; }
+
+.apple-watch__screen img {
+  border-radius: 5px;
+  height: 100%; }
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border-radius: 10%; }
+
+.dials {
+  height: 180px;
+  width: 180px;
+  border-radius: 100%;
+  position: absolute; }
+
+.dial {
+  position: absolute;
+  width: 100%;
+  height: 0.7px;
+  background: var(--gray);
+  top: 50%; }
+
+.dial_0 {
+  transform: rotate(0deg); }
+
+.dial_1 {
+  transform: rotate(6deg); }
+
+.dial_2 {
+  transform: rotate(12deg); }
+
+.dial_3 {
+  transform: rotate(18deg); }
+
+.dial_4 {
+  transform: rotate(24deg); }
+
+.dial_5 {
+  transform: rotate(30deg); }
+
+.dial_6 {
+  transform: rotate(36deg); }
+
+.dial_7 {
+  transform: rotate(42deg); }
+
+.dial_8 {
+  transform: rotate(48deg); }
+
+.dial_9 {
+  transform: rotate(54deg); }
+
+.dial_10 {
+  transform: rotate(60deg); }
+
+.dial_11 {
+  transform: rotate(66deg); }
+
+.dial_12 {
+  transform: rotate(72deg); }
+
+.dial_13 {
+  transform: rotate(78deg); }
+
+.dial_14 {
+  transform: rotate(84deg); }
+
+.dial_0, .dial_5, .dial_10 {
+  background: var(--red); }
+
+.dial_0 {
+  height: 2px; }
+
+.face {
+  height: 165px;
+  width: 165px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--blueScreen); }
+  .face::after {
+    content: " ";
+    z-index: 3;
+    height: 6px;
+    width: 6px;
+    border-radius: 100%;
+    position: absolute;
+    background: var(--red);
+    top: 48%;
+    left: 48%; }
+
+.hand {
+  background: var(--gray);
+  height: 78px;
+  position: absolute;
+  transform-origin: 48% bottom;
+  left: 49.5%;
+  top: 2.5%;
+  z-index: 2;
+  box-shadow: .1px .1px 10px #1D2631; }
+
+.seconds-hand {
+  background-color: var(--red);
+  border-radius: 100%;
+  width: 1px; }
+
+.hours-hand {
+  height: 30%;
+  width: 4px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  top: 20%;
+  background: #ccff00;
+  border-top: 9px solid var(--gray);
+  border-bottom: 13px solid var(--gray);
+  border-right: 0.5px solid var(--gray);
+  border-left: 0.5px solid var(--gray); }
+
+.minutes-hand {
+  height: 78px;
+  width: 3px;
+  background: #ccff00;
+  border-top: 20px solid var(--gray);
+  border-bottom: 20px solid var(--gray);
+  border-right: 0.5px solid var(--gray);
+  border-left: 0.5px solid var(--gray);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px; }
+
+.digital_clock {
+  color: #5d6d7e;
+  font-weight: 100;
+  position: absolute;
+  right: 9%;
+  top: 40.5%; }
+
+.number {
+  color: var(--gray);
+  position: absolute;
+  font-size: 11px; }
+
+.twelve {
+  left: 75.5px;
+  top: 3px; }
+
+.three {
+  right: 3px;
+  top: 78px; }
+
+.six {
+  left: 79px;
+  bottom: 3px; }
+
+.nine {
+  left: 3px;
+  top: 78px; }
+
+.day_date {
+  position: absolute;
+  font-weight: 100;
+  bottom: 40.5%;
+  right: 20px;
+  font-size: 12px; }
+
+.day {
+  color: #fff;
+  letter-spacing: 1.5px; }
+
+.date {
+  color: var(--red); }
 
 /*# sourceMappingURL=main.css.map */
