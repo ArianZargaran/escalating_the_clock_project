@@ -1,39 +1,55 @@
 :root {
+  --siteBackground: #5d6d7e;
   --red: tomato;
   --gray: #ccc;
-  --blueScreen: #1b2631; }
+  --blueScreen: #1b2631;
+  --radiant: #ccff00;
+  --greyWatchFrame: #e2e2e2;
+  --greyWatchFrameBorder: #bcbcbc; }
 
 * {
   box-sizing: border-box; }
 
 body {
-  background: #5d6d7e;
+  background: var(--siteBackground);
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding: 60px;
+  padding-top: 60px;
   font-family: "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  font-weight: 100; }
 
 h1 {
   color: var(--gray);
+  text-align: center;
   font-size: 40px;
   padding: 40px;
-  text-align: center;
+  margin: 0 auto;
   font-family: "Dancing Script", cursive;
   font-weight: 100; }
 
+.js_container {
+  padding: 20px 0; }
+
+.apple-watch-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%; }
+
 .apple-watch {
-  background: #e2e2e2;
+  background: var(--greyWatchFrame);
   width: 230px;
   height: 269px;
   border-radius: 43px;
   padding: 8px;
   box-sizing: border-box;
-  border: 1px solid #bcbcbc;
-  position: relative;
-  margin-right: 13px; }
+  border: 1px solid var(--greyWatchFrameBorder);
+  position: relative; }
 
 .apple-watch::before {
   content: "";
@@ -44,8 +60,8 @@ h1 {
   position: absolute;
   right: -13px;
   top: 62px;
-  background: #e2e2e2;
-  border: 1px solid #bcbcbc; }
+  background: var(--greyWatchFrame);
+  border: 1px solid var(--greyWatchFrameBorder); }
 
 .apple-watch::after {
   content: "";
@@ -56,8 +72,8 @@ h1 {
   position: absolute;
   right: -5px;
   top: 140px;
-  background: #e2e2e2;
-  border: 1px solid #bcbcbc; }
+  background: var(--greyWatchFrame);
+  border: 1px solid var(--greyWatchFrameBorder); }
 
 .apple-watch__screen {
   background: var(--blueScreen);
@@ -66,10 +82,6 @@ h1 {
   box-sizing: border-box;
   padding: 28px;
   overflow: hidden; }
-
-.apple-watch__screen img {
-  border-radius: 5px;
-  height: 100%; }
 
 .clock {
   display: flex;
@@ -164,33 +176,34 @@ h1 {
   background: var(--gray);
   height: 78px;
   position: absolute;
-  transform-origin: 48% bottom;
+  transform-origin: 49% bottom;
   left: 49.5%;
   top: 2.5%;
   z-index: 2;
-  box-shadow: .1px .1px 10px #1D2631; }
+  box-shadow: 0.1px 0.1px 10px var(--blueScreen); }
 
 .seconds-hand {
   background-color: var(--red);
-  border-radius: 100%;
-  width: 1px; }
+  width: 1px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px; }
 
 .hours-hand {
   height: 30%;
   width: 4px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
   top: 20%;
-  background: #ccff00;
+  background: var(--radiant);
   border-top: 9px solid var(--gray);
   border-bottom: 13px solid var(--gray);
   border-right: 0.5px solid var(--gray);
-  border-left: 0.5px solid var(--gray); }
+  border-left: 0.5px solid var(--gray);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px; }
 
 .minutes-hand {
   height: 78px;
   width: 3px;
-  background: #ccff00;
+  background: var(--radiant);
   border-top: 20px solid var(--gray);
   border-bottom: 20px solid var(--gray);
   border-right: 0.5px solid var(--gray);
@@ -230,14 +243,21 @@ h1 {
   position: absolute;
   font-weight: 100;
   bottom: 40.5%;
-  right: 20px;
-  font-size: 12px; }
+  right: 18px;
+  font-size: 12px;
+  letter-spacing: 1.5px; }
 
 .day {
-  color: #fff;
-  letter-spacing: 1.5px; }
+  color: var(--gray); }
 
 .date {
   color: var(--red); }
+
+.location {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 20px 0; }
 
 /*# sourceMappingURL=main.css.map */
