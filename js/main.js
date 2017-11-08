@@ -1,27 +1,47 @@
 let container = document.getElementById("apple-watch-container")
-let newClock = '<div id="each-watch_container" class="each-watch_container"><h2 class="location">Pacific time</h2><div class="apple-watch"><div class="apple-watch__screen"><div class="clock analog_clock"><div class="dials"></div><div class="face"><div class="hands"><div class="hand hours-hand"></div><div class="hand minutes-hand"></div><div class="hand seconds-hand"></div></div><div class="numbers"><span class="number twelve">12</span><span class="number three">3</span><span class="number six">6</span><span class="number nine">9</span></div><div class="digital_clock"></div><div class="day_date"><span class="day"></span><span class="date"></span></div></div></div></div></div>'
+let newClock = '<h2 class="location">Pacific time</h2><div class="apple-watch"><div class="apple-watch__screen"><div class="clock analog_clock"><div class="dials"></div><div class="face"><div class="hands"><div class="hand hours-hand"></div><div class="hand minutes-hand"></div><div class="hand seconds-hand"></div></div><div class="numbers"><span class="number twelve">12</span><span class="number three">3</span><span class="number six">6</span><span class="number nine">9</span></div><div class="digital_clock"></div><div class="day_date"><span class="day"></span><span class="date"></span></div></div></div></div>'
 container.innerHTML = newClock
 
-// class Watch {
-//   constructor(x,y) {
-//     this.x = x;
-//     this.y = y;
-//   }
+// /////////
+// let nextId = 0;
 //
-//   static timeZone(a) {
+// let Watch = function Watch(name, timezone) {
+//   let myThis = this;
+//   this.time = new Date();
+//   this.name = name;
 //
-//   let newClock = '<div id="each-watch_container" class="each-watch_container"><h2 class="location">' + this.x + '</h2><div class="apple-watch"><div class="apple-watch__screen"><div class="clock analog_clock"><div class="dials"></div><div class="face"><div class="hands"><div class="hand hours-hand"></div><div class="hand minutes-hand"></div><div class="hand seconds-hand"></div></div><div class="numbers"><span class="number twelve">12</span><span class="number three">3</span><span class="number six">6</span><span class="number nine">9</span></div><div class="digital_clock"></div><div class="day_date"><span class="day"></span><span class="date"></span></div></div></div></div></div>'
+//   this.myEl = $(`<div class='container-${nextId}'>`);
 //
-//   let m
+//   $('body').append(this.myEl);
 //
-//   return newClock;
-//   }
+//   if (timezone === 'SF') {myThis.time.setTime(myThis.time.getTime());}
+//   if (timezone === 'Madrid') {myThis.time.setTime(myThis.time.getTime() - (1000 * 60 * 60 * 15));}
 //
-// }
 //
-// var pacific = new Watch("Pacific time", 0);
+//   setInterval(this.addSecond.bind(this), 1000);
 //
-
+//   nextId += 1;
+// };
+//
+// Watch.prototype.addSecond = function() {
+//   this.time.setTime(this.time.getTime() + 1000);
+//   var html = this.render();
+//   this.myEl.html(html);
+// };
+//
+// Watch.prototype.render = function() {
+//   let m = this.time.getMinutes().toString().padStart(2, '0');
+//   let h = this.time.getHours().toString().padStart(2, '0');
+//   let s = this.time.getSeconds().toString().padStart(2, '0');
+//   let name = this.name;
+//
+//   return `<div>${name}</div>\t\t\t${h}:${m}:${s}`;
+// };
+//
+// new Watch('Madrid', 'Madrid');
+// new Watch('Argel', 'Madrid');
+// new Watch('San Francisco', 'SF');
+/////////////
 
 function dialCreation(){
 let getDials = document.querySelector(".dials")
