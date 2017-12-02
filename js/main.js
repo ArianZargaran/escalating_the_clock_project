@@ -12,46 +12,8 @@ Watch.prototype.getTime = function(){}
 var madrid = new Watch(+1, "Madrid")
 
 
-// /////////
-// let nextId = 0;
-//
-// let Watch = function Watch(name, timezone) {
-//   let myThis = this;
-//   this.time = new Date();
-//   this.name = name;
-//
-//   this.myEl = $(`<div class='container-${nextId}'>`);
-//
-//   $('body').append(this.myEl);
-//
-//   if (timezone === 'SF') {myThis.time.setTime(myThis.time.getTime());}
-//   if (timezone === 'Madrid') {myThis.time.setTime(myThis.time.getTime() - (1000 * 60 * 60 * 15));}
-//
-//
-//   setInterval(this.addSecond.bind(this), 1000);
-//
-//   nextId += 1;
-// };
-//
-// Watch.prototype.addSecond = function() {
-//   this.time.setTime(this.time.getTime() + 1000);
-//   var html = this.render();
-//   this.myEl.html(html);
-// };
-//
-// Watch.prototype.render = function() {
-//   let m = this.time.getMinutes().toString().padStart(2, '0');
-//   let h = this.time.getHours().toString().padStart(2, '0');
-//   let s = this.time.getSeconds().toString().padStart(2, '0');
-//   let name = this.name;
-//
-//   return `<div>${name}</div>\t\t\t${h}:${m}:${s}`;
-// };
-//
-// new Watch('Madrid', 'Madrid');
-// new Watch('Argel', 'Madrid');
-// new Watch('San Francisco', 'SF');
-/////////////
+
+//PAINTING THE WATCH//
 
 function dialCreation(){
 let getDials = document.querySelector(".dials")
@@ -107,3 +69,47 @@ function round(n){return n > 9 ? "" + n: "0" + n;}
 function getTheDay(){return Date().substring(0,3).toUpperCase()}
 
 function getTheDate(){return Date().substring(8,10);}
+
+
+//REFERENCE//
+
+// /////////
+// let nextId = 0;
+//
+// let Watch = function Watch(name, timezone) {
+//   let myThis = this;
+//   this.time = new Date();
+//   this.name = name;
+//
+//   this.myEl = $(`<div class='container-${nextId}'>`);
+//
+//   $('body').append(this.myEl);
+//
+//   if (timezone === 'SF') {myThis.time.setTime(myThis.time.getTime());}
+//   if (timezone === 'Madrid') {myThis.time.setTime(myThis.time.getTime() - (1000 * 60 * 60 * 15));}
+//
+//
+//   setInterval(this.addSecond.bind(this), 1000);
+//
+//   nextId += 1;
+// };
+//
+// Watch.prototype.addSecond = function() {
+//   this.time.setTime(this.time.getTime() + 1000);
+//   var html = this.render();
+//   this.myEl.html(html);
+// };
+//
+// Watch.prototype.render = function() {
+//   let m = this.time.getMinutes().toString().padStart(2, '0');
+//   let h = this.time.getHours().toString().padStart(2, '0');
+//   let s = this.time.getSeconds().toString().padStart(2, '0');
+//   let name = this.name;
+//
+//   return `<div>${name}</div>\t\t\t${h}:${m}:${s}`;
+// };
+//
+// new Watch('Madrid', 'Madrid');
+// new Watch('Argel', 'Madrid');
+// new Watch('San Francisco', 'SF');
+/////////////
