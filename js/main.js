@@ -2,6 +2,16 @@ let container = document.getElementById("apple-watch-container")
 let newClock = '<h2 class="location">Pacific time</h2><div class="apple-watch"><div class="apple-watch__screen"><div class="clock analog_clock"><div class="dials"></div><div class="face"><div class="hands"><div class="hand hours-hand"></div><div class="hand minutes-hand"></div><div class="hand seconds-hand"></div></div><div class="numbers"><span class="number twelve">12</span><span class="number three">3</span><span class="number six">6</span><span class="number nine">9</span></div><div class="digital_clock"></div><div class="day_date"><span class="day"></span><span class="date"></span></div></div></div></div>'
 container.innerHTML = newClock
 
+let Watch = function Watch(gmt, timezone) {
+  this.gmt = gmt;
+  this.timezone = timezone;
+}
+
+Watch.prototype.getTime = function(){}
+
+var madrid = new Watch(+1, "Madrid")
+
+
 // /////////
 // let nextId = 0;
 //
