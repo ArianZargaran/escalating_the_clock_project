@@ -1,3 +1,4 @@
+/* line 3, main.scss */
 :root {
   --siteBackground: #5d6d7e;
   --red: tomato;
@@ -7,20 +8,32 @@
   --greyWatchFrame: #e2e2e2;
   --greyWatchFrameBorder: #bcbcbc; }
 
+/* line 13, main.scss */
 * {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
+/* line 17, main.scss */
 body {
   background: var(--siteBackground);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-top: 60px;
   font-family: "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 100; }
 
+/* line 29, main.scss */
 h1 {
   color: var(--gray);
   text-align: center;
@@ -30,27 +43,41 @@ h1 {
   font-family: "Dancing Script", cursive;
   font-weight: 100; }
 
+/* line 39, main.scss */
 .js_container {
   padding: 20px 0; }
 
+/* line 44, main.scss */
 .apple-watch-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  width: 100%; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%; }
 
+/* line 54, main.scss */
 .apple-watch {
   background: var(--greyWatchFrame);
   width: 230px;
   height: 269px;
   border-radius: 43px;
   padding: 8px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid var(--greyWatchFrameBorder);
   position: relative; }
 
+/* line 64, main.scss */
 .apple-watch::before {
   content: "";
   display: block;
@@ -63,6 +90,7 @@ h1 {
   background: var(--greyWatchFrame);
   border: 1px solid var(--greyWatchFrameBorder); }
 
+/* line 76, main.scss */
 .apple-watch::after {
   content: "";
   display: block;
@@ -75,27 +103,38 @@ h1 {
   background: var(--greyWatchFrame);
   border: 1px solid var(--greyWatchFrameBorder); }
 
+/* line 88, main.scss */
 .apple-watch__screen {
   background: var(--blueScreen);
   height: 100%;
   border-radius: 35px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 28px;
   overflow: hidden; }
 
+/* line 98, main.scss */
 .clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 200px;
   border-radius: 10%; }
 
+/* line 106, main.scss */
 .dials {
   height: 180px;
   width: 180px;
   border-radius: 100%;
   position: absolute; }
 
+/* line 113, main.scss */
 .dial {
   position: absolute;
   width: 100%;
@@ -103,57 +142,90 @@ h1 {
   background: var(--gray);
   top: 50%; }
 
+/* line 122, main.scss */
 .dial_0 {
-  transform: rotate(0deg); }
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg); }
 
+/* line 122, main.scss */
 .dial_1 {
-  transform: rotate(6deg); }
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg); }
 
+/* line 122, main.scss */
 .dial_2 {
-  transform: rotate(12deg); }
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg); }
 
+/* line 122, main.scss */
 .dial_3 {
-  transform: rotate(18deg); }
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg); }
 
+/* line 122, main.scss */
 .dial_4 {
-  transform: rotate(24deg); }
+  -webkit-transform: rotate(24deg);
+          transform: rotate(24deg); }
 
+/* line 122, main.scss */
 .dial_5 {
-  transform: rotate(30deg); }
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg); }
 
+/* line 122, main.scss */
 .dial_6 {
-  transform: rotate(36deg); }
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg); }
 
+/* line 122, main.scss */
 .dial_7 {
-  transform: rotate(42deg); }
+  -webkit-transform: rotate(42deg);
+          transform: rotate(42deg); }
 
+/* line 122, main.scss */
 .dial_8 {
-  transform: rotate(48deg); }
+  -webkit-transform: rotate(48deg);
+          transform: rotate(48deg); }
 
+/* line 122, main.scss */
 .dial_9 {
-  transform: rotate(54deg); }
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg); }
 
+/* line 122, main.scss */
 .dial_10 {
-  transform: rotate(60deg); }
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg); }
 
+/* line 122, main.scss */
 .dial_11 {
-  transform: rotate(66deg); }
+  -webkit-transform: rotate(66deg);
+          transform: rotate(66deg); }
 
+/* line 122, main.scss */
 .dial_12 {
-  transform: rotate(72deg); }
+  -webkit-transform: rotate(72deg);
+          transform: rotate(72deg); }
 
+/* line 122, main.scss */
 .dial_13 {
-  transform: rotate(78deg); }
+  -webkit-transform: rotate(78deg);
+          transform: rotate(78deg); }
 
+/* line 122, main.scss */
 .dial_14 {
-  transform: rotate(84deg); }
+  -webkit-transform: rotate(84deg);
+          transform: rotate(84deg); }
 
+/* line 125, main.scss */
 .dial_0, .dial_5, .dial_10 {
   background: var(--red); }
 
+/* line 127, main.scss */
 .dial_0 {
   height: 2px; }
 
+/* line 129, main.scss */
 .face {
   height: 165px;
   width: 165px;
@@ -161,6 +233,7 @@ h1 {
   position: absolute;
   z-index: 1;
   background-color: var(--blueScreen); }
+  /* line 136, main.scss */
   .face::after {
     content: " ";
     z-index: 3;
@@ -172,22 +245,27 @@ h1 {
     top: 48%;
     left: 48%; }
 
+/* line 149, main.scss */
 .hand {
   background: var(--gray);
   height: 78px;
   position: absolute;
-  transform-origin: 49% bottom;
+  -webkit-transform-origin: 49% bottom;
+          transform-origin: 49% bottom;
   left: 49.5%;
   top: 2.5%;
   z-index: 2;
-  box-shadow: 0.1px 0.1px 10px var(--blueScreen); }
+  -webkit-box-shadow: 0.1px 0.1px 10px var(--blueScreen);
+          box-shadow: 0.1px 0.1px 10px var(--blueScreen); }
 
+/* line 160, main.scss */
 .seconds-hand {
   background-color: var(--red);
   width: 1px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
+/* line 167, main.scss */
 .hours-hand {
   height: 30%;
   width: 4px;
@@ -200,6 +278,7 @@ h1 {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
+/* line 180, main.scss */
 .minutes-hand {
   height: 78px;
   width: 3px;
@@ -211,6 +290,7 @@ h1 {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
+/* line 192, main.scss */
 .digital_clock {
   color: #5d6d7e;
   font-weight: 100;
@@ -218,27 +298,33 @@ h1 {
   right: 9%;
   top: 40.5%; }
 
+/* line 200, main.scss */
 .number {
   color: var(--gray);
   position: absolute;
   font-size: 11px; }
 
+/* line 206, main.scss */
 .twelve {
   left: 75.5px;
   top: 3px; }
 
+/* line 211, main.scss */
 .three {
   right: 3px;
   top: 78px; }
 
+/* line 216, main.scss */
 .six {
   left: 79px;
   bottom: 3px; }
 
+/* line 221, main.scss */
 .nine {
   left: 3px;
   top: 78px; }
 
+/* line 226, main.scss */
 .day_date {
   position: absolute;
   font-weight: 100;
@@ -247,12 +333,15 @@ h1 {
   font-size: 12px;
   letter-spacing: 1.5px; }
 
+/* line 235, main.scss */
 .day {
   color: var(--gray); }
 
+/* line 239, main.scss */
 .date {
   color: var(--red); }
 
+/* line 243, main.scss */
 .location {
   color: #fff;
   font-size: 24px;
