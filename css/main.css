@@ -65,7 +65,12 @@ h1 {
           flex-direction: row;
   width: 80%; }
 
-/* line 54, main.scss */
+/* line 53, main.scss */
+.watch-wrapper {
+  padding: 100px;
+  background: tomato; }
+
+/* line 60, main.scss */
 .apple-watch {
   background: var(--greyWatchFrame);
   width: 230px;
@@ -77,7 +82,7 @@ h1 {
   border: 1px solid var(--greyWatchFrameBorder);
   position: relative; }
 
-/* line 64, main.scss */
+/* line 70, main.scss */
 .apple-watch::before {
   content: "";
   display: block;
@@ -90,7 +95,7 @@ h1 {
   background: var(--greyWatchFrame);
   border: 1px solid var(--greyWatchFrameBorder); }
 
-/* line 76, main.scss */
+/* line 82, main.scss */
 .apple-watch::after {
   content: "";
   display: block;
@@ -103,7 +108,7 @@ h1 {
   background: var(--greyWatchFrame);
   border: 1px solid var(--greyWatchFrameBorder); }
 
-/* line 88, main.scss */
+/* line 94, main.scss */
 .apple-watch__screen {
   background: var(--blueScreen);
   height: 100%;
@@ -113,7 +118,7 @@ h1 {
   padding: 28px;
   overflow: hidden; }
 
-/* line 98, main.scss */
+/* line 104, main.scss */
 .clock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,14 +132,14 @@ h1 {
   height: 200px;
   border-radius: 10%; }
 
-/* line 106, main.scss */
+/* line 112, main.scss */
 .dials {
   height: 180px;
   width: 180px;
   border-radius: 100%;
   position: absolute; }
 
-/* line 113, main.scss */
+/* line 119, main.scss */
 .dial {
   position: absolute;
   width: 100%;
@@ -142,90 +147,90 @@ h1 {
   background: var(--gray);
   top: 50%; }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_0 {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_1 {
   -webkit-transform: rotate(6deg);
           transform: rotate(6deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_2 {
   -webkit-transform: rotate(12deg);
           transform: rotate(12deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_3 {
   -webkit-transform: rotate(18deg);
           transform: rotate(18deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_4 {
   -webkit-transform: rotate(24deg);
           transform: rotate(24deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_5 {
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_6 {
   -webkit-transform: rotate(36deg);
           transform: rotate(36deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_7 {
   -webkit-transform: rotate(42deg);
           transform: rotate(42deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_8 {
   -webkit-transform: rotate(48deg);
           transform: rotate(48deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_9 {
   -webkit-transform: rotate(54deg);
           transform: rotate(54deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_10 {
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_11 {
   -webkit-transform: rotate(66deg);
           transform: rotate(66deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_12 {
   -webkit-transform: rotate(72deg);
           transform: rotate(72deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_13 {
   -webkit-transform: rotate(78deg);
           transform: rotate(78deg); }
 
-/* line 122, main.scss */
+/* line 128, main.scss */
 .dial_14 {
   -webkit-transform: rotate(84deg);
           transform: rotate(84deg); }
 
-/* line 125, main.scss */
+/* line 131, main.scss */
 .dial_0, .dial_5, .dial_10 {
   background: var(--red); }
 
-/* line 127, main.scss */
+/* line 133, main.scss */
 .dial_0 {
   height: 2px; }
 
-/* line 129, main.scss */
+/* line 135, main.scss */
 .face {
   height: 165px;
   width: 165px;
@@ -233,7 +238,7 @@ h1 {
   position: absolute;
   z-index: 1;
   background-color: var(--blueScreen); }
-  /* line 136, main.scss */
+  /* line 142, main.scss */
   .face::after {
     content: " ";
     z-index: 3;
@@ -245,7 +250,7 @@ h1 {
     top: 48%;
     left: 48%; }
 
-/* line 149, main.scss */
+/* line 155, main.scss */
 .hand {
   background: var(--gray);
   height: 78px;
@@ -258,14 +263,14 @@ h1 {
   -webkit-box-shadow: 0.1px 0.1px 10px var(--blueScreen);
           box-shadow: 0.1px 0.1px 10px var(--blueScreen); }
 
-/* line 160, main.scss */
+/* line 166, main.scss */
 .seconds-hand {
   background-color: var(--red);
   width: 1px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
-/* line 167, main.scss */
+/* line 173, main.scss */
 .hours-hand {
   height: 30%;
   width: 4px;
@@ -278,7 +283,7 @@ h1 {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
-/* line 180, main.scss */
+/* line 186, main.scss */
 .minutes-hand {
   height: 78px;
   width: 3px;
@@ -290,7 +295,7 @@ h1 {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
-/* line 192, main.scss */
+/* line 198, main.scss */
 .digital_clock {
   color: #5d6d7e;
   font-weight: 100;
@@ -298,33 +303,33 @@ h1 {
   right: 9%;
   top: 40.5%; }
 
-/* line 200, main.scss */
+/* line 206, main.scss */
 .number {
   color: var(--gray);
   position: absolute;
   font-size: 11px; }
 
-/* line 206, main.scss */
+/* line 212, main.scss */
 .twelve {
   left: 75.5px;
   top: 3px; }
 
-/* line 211, main.scss */
+/* line 217, main.scss */
 .three {
   right: 3px;
   top: 78px; }
 
-/* line 216, main.scss */
+/* line 222, main.scss */
 .six {
   left: 79px;
   bottom: 3px; }
 
-/* line 221, main.scss */
+/* line 227, main.scss */
 .nine {
   left: 3px;
   top: 78px; }
 
-/* line 226, main.scss */
+/* line 232, main.scss */
 .day_date {
   position: absolute;
   font-weight: 100;
@@ -333,15 +338,15 @@ h1 {
   font-size: 12px;
   letter-spacing: 1.5px; }
 
-/* line 235, main.scss */
+/* line 241, main.scss */
 .day {
   color: var(--gray); }
 
-/* line 239, main.scss */
+/* line 245, main.scss */
 .date {
   color: var(--red); }
 
-/* line 243, main.scss */
+/* line 249, main.scss */
 .location {
   color: #fff;
   font-size: 24px;
