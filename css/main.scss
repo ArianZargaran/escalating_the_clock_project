@@ -51,10 +51,9 @@ h1 {
 }
 
 .watch-wrapper {
-padding: 100px;
-background: tomato;
+  padding: 10px 15px;
+  margin: 1px;
 }
-
 
 //Apple Watch
 .apple-watch {
@@ -124,13 +123,13 @@ background: tomato;
   top: 50%;
 }
 
-@for $i from 0 through 14 {
+@for $i from 0 through 29 {
   .dial_#{$i} {transform: rotate($i*6deg);}
 }
 
-.dial_0, .dial_5, .dial_10 {background: var(--red);}
+.dial_0, .dial_5, .dial_10, .dial_15, .dial_20, .dial_25,  {background: var(--red);}
 
-.dial_0 {height: 2px;}
+.dial_0, .dial_15 {height: 2px;}
 
 .face {
   height: 165px;
