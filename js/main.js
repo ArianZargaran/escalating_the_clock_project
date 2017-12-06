@@ -1,58 +1,58 @@
-let Watch = function Watch(gmt, timezone) {
+let Watch = function Watch(gmt, timezone, site) {
   this.gmt = gmt;
   this.timezone = timezone;
-  this.mainContainerEl = document.getElementById('apple-watch-container');
+  this.mainContainerEl = document.getElementById(site);
   
   this.watchWrapperEl = document.createElement('DIV');
-  this.watchWrapperEl.classList.add('watch-wrapper');
+  this.watchWrapperEl.classList.add('az-watch_wrapper');
   
   this.dialsEl = document.createElement('DIV');
-  this.dialsEl.classList.add('dials');
+  this.dialsEl.classList.add('az-watch_dials');
   
   const locationEl = document.createElement('H2');
-  locationEl.classList.add('location');
+  locationEl.classList.add('az-watch_location');
   locationEl.innerHTML = this.timezone;
   
   this.watchWrapperEl.appendChild(locationEl);
   
   this.watchWrapperEl.innerHTML += 
-    '<div class="apple-watch">' +
-      '<div class="apple-watch__screen">' + 
-        '<div class="clock analog_clock">' +
-          '<div class="face">' +
-            '<div class="hands">' +
-              '<div class="hand hours-hand hours"></div>' +
-              '<div class="hand minutes-hand"></div>' +
-              '<div class="hand seconds-hand"></div>' +
+    '<div class="az-watch">' +
+      '<div class="az-watch_screen">' + 
+        '<div class="az-watch_analog">' +
+          '<div class="az-watch_face">' +
+            '<div class="az-watch_hands">' +
+              '<div class="az-watch_hand az-watch_hours-hand"></div>' +
+              '<div class="az-watch_hand az-watch_minutes-hand"></div>' +
+              '<div class="az-watch_hand az-watch_seconds-hand"></div>' +
             '</div>' +
-            '<div class="numbers">' +
-              '<span class="number twelve">12</span>' +
-              '<span class="number three">3</span>' +
-              '<span class="number six">6</span>' +
-              '<span class="number nine">9</span>' +
+            '<div class="az-watch_numbers">' +
+              '<span class="az-watch_number az-watch_number-twelve">12</span>' +
+              '<span class="az-watch_number az-watch_number-three">3</span>' +
+              '<span class="az-watch_number az-watch_number-six">6</span>' +
+              '<span class="az-watch_number az-watch_number-nine">9</span>' +
             '</div>' +
-            '<div class="digital_clock"></div>' +
-            '<div class="day_date">' +
-              '<span class="day"></span>' +
-              '<span class="date"></span>' +
+            '<div class="az-watch_digital_clock"></div>' +
+            '<div class="az-watch_calendar">' +
+              '<span class="az-watch_calendar_day"></span>' +
+              '<span class="az-watch_calendar_date"></span>' +
             '</div>' +
           '</div>' +
         '</div>' +
       '</div>' + 
     '</div>';
   
-  const analogClockEl = this.watchWrapperEl.querySelector('.analog_clock');
+  const analogClockEl = this.watchWrapperEl.querySelector('.az-watch_analog');
   analogClockEl.appendChild(this.dialsEl);
   analogClockEl.insertBefore(this.dialsEl, analogClockEl.firstChild);
   this.paintDials();
 
-  let hoursHandEl = this.watchWrapperEl.querySelector('.hours-hand');
-  let minutesHandEl = this.watchWrapperEl.querySelector('.minutes-hand');
-  let secondsHandEl = this.watchWrapperEl.querySelector('.seconds-hand');
-  let digitalClockEl = this.watchWrapperEl.querySelector('.digital_clock');
-  let dateDayEl = this.watchWrapperEl.querySelector('.day_date');
+  this.hoursHandEl = this.watchWrapperEl.querySelector('.az-watch_hours-hand');
+  this.minutesHandEl = this.watchWrapperEl.querySelector('.az-watch_minutes-hand');
+  this.secondsHandEl = this.watchWrapperEl.querySelector('.az-watch_seconds-hand');
+  this.digitalClockEl = this.watchWrapperEl.querySelector('.az-watch_digital_clock');
+  this.calendarEl = this.watchWrapperEl.querySelector('.az-watch_calendar');
   
-  this.clockEvent(hoursHandEl, minutesHandEl, secondsHandEl, digitalClockEl, dateDayEl);
+  this.clockEvent();
 }
 
 
@@ -63,12 +63,12 @@ Watch.prototype.initialize = function(){
 Watch.prototype.paintDials = function(){
   for(var i = 0; i < 30; i++){
     this.dialEl = document.createElement('DIV')
-    this.dialEl.className = 'dial dial_' + i;
+    this.dialEl.className = 'az-watch_dial az-watch_dial-' + i;
     this.dialsEl.appendChild(this.dialEl)
   }
 };
 
-Watch.prototype.clockEvent = function(h, m, s, d, dd){
+Watch.prototype.clockEvent = function(){
   const now = new Date()
   let seconds = now.getSeconds();
   let minutes = now.getMinutes();
@@ -79,16 +79,16 @@ Watch.prototype.clockEvent = function(h, m, s, d, dd){
   let minutesDegrees = (minutes / 60) * 360
   let hoursDegrees = (hours / 12 * 360) + minutes * .5
 
-  s.style.transform = 'rotate(' + secondsDegrees + 'deg)';
-  m.style.transform = 'rotate(' + minutesDegrees + 'deg)';
-  h.style.transform = 'rotate(' + hoursDegrees + 'deg)';
+  this.secondsHandEl.style.transform = 'rotate(' + secondsDegrees + 'deg)';
+  this.minutesHandEl.style.transform = 'rotate(' + minutesDegrees + 'deg)';
+  this.hoursHandEl.style.transform = 'rotate(' + hoursDegrees + 'deg)';
 
-  d.innerHTML = this.round(hours) + ":" + this.round(minutes) + ":" + this.round(seconds)
+  this.digitalClockEl.innerHTML = this.round(hours) + ":" + this.round(minutes) + ":" + this.round(seconds)
 
-  dd.children[0].innerHTML = this.getTheDay()
-  dd.children[1].innerHTML = this.getTheDate()
+  this.calendarEl.children[0].innerHTML = this.getTheDay()
+  this.calendarEl.children[1].innerHTML = this.getTheDate()
 
-  setInterval(this.clockEvent.bind(this, h, m, s, d, dd), 1000)
+  setInterval(this.clockEvent.bind(this), 1000);
 }
 
 Watch.prototype.round = function(n){return n > 9 ? "" + n: "0" + n;}
@@ -99,28 +99,27 @@ Watch.prototype.getTheDate = function(){return Date().substring(8,10);}
 
 
 
-const m = new Watch(1, 'Madrid');
+const m = new Watch(1, 'Madrid', "az-watches_container");
 m.initialize();
 
 
-var santaClara = new Watch(-8, "Santa Clara")
+var santaClara = new Watch(-8, "Santa Clara", "az-watches_container")
 santaClara.initialize()
 
-var estambul = new Watch(3, "Estambul")
+var estambul = new Watch(3, "Estambul", "az-watches_container")
 estambul.initialize()
 
-var hawaii = new Watch(8, "Hawaii")
+var hawaii = new Watch(8, "Hawaii", "az-watches_container")
 hawaii.initialize()
 
-var berlin = new Watch(-10, "Berlín")
+var berlin = new Watch(-10, "Berlín", "az-watches_container")
 berlin.initialize()
 
-var dublin = new Watch(0, "Dublín")
+var dublin = new Watch(0, "Dublín", "az-watches_container")
 dublin.initialize()
 
-var paris = new Watch(-5, "París")
+var paris = new Watch(-5, "París", "az-watches_container")
 paris.initialize()
 
-var sanLorenzoDeCalatrava = new Watch(-8, "San Lorenzo")
+var sanLorenzoDeCalatrava = new Watch(-8, "San Lorenzo", "az-watches_container")
 sanLorenzoDeCalatrava.initialize()
-

@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   padding-top: 60px;
-  font-family: "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 14px;
   font-weight: 100;
 }
@@ -36,12 +36,8 @@ h1 {
   font-weight: 100;
 }
 
-.js_container {
-  padding: 20px 0;
-}
-
 //Watches container
-.apple-watch-container {
+.az-watches_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -50,13 +46,13 @@ h1 {
   width: 80%;
 }
 
-.watch-wrapper {
+.az-watch_wrapper {
   padding: 10px 15px;
   margin: 1px;
 }
 
 //Apple Watch
-.apple-watch {
+.az-watch {
   background: var(--greyWatchFrame);
   width: 230px;
   height: 269px;
@@ -66,7 +62,7 @@ h1 {
   border: 1px solid var(--greyWatchFrameBorder);
   position: relative;
 }
-.apple-watch::before {
+.az-watch::before {
   content: "";
   display: block;
   width: 16px;
@@ -78,7 +74,7 @@ h1 {
   background: var(--greyWatchFrame);
   border: 1px solid var(--greyWatchFrameBorder);
 }
-.apple-watch::after {
+.az-watch::after {
   content: "";
   display: block;
   width: 5px;
@@ -90,7 +86,7 @@ h1 {
   background: var(--greyWatchFrame);
   border: 1px solid var(--greyWatchFrameBorder);
 }
-.apple-watch__screen {
+.az-watch_screen {
   background: var(--blueScreen);
   height: 100%;
   border-radius: 35px;
@@ -100,7 +96,7 @@ h1 {
 }
 
 //blue screen
-.clock {
+.az-watch_analog {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,14 +104,14 @@ h1 {
   border-radius: 10%;
 }
 
-.dials {
+.az-watch_dials {
   height: 180px;
   width: 180px;
   border-radius: 100%;
   position: absolute;
 }
 
-.dial {
+.az-watch_dial {
   position: absolute;
   width: 100%;
   height: 0.7px;
@@ -124,14 +120,14 @@ h1 {
 }
 
 @for $i from 0 through 29 {
-  .dial_#{$i} {transform: rotate($i*6deg);}
+  .az-watch_dial-#{$i} {transform: rotate($i*6deg);}
 }
 
-.dial_0, .dial_5, .dial_10, .dial_15, .dial_20, .dial_25,  {background: var(--red);}
+.az-watch_dial-0, .az-watch_dial-5, .az-watch_dial-10, .az-watch_dial-15, .az-watch_dial-20, .az-watch_dial-25 {background: var(--red);}
 
-.dial_0, .dial_15 {height: 2px;}
+.az-watch_dial-0, .az-watch_dial-15 {height: 2px;}
 
-.face {
+.az-watch_face {
   height: 165px;
   width: 165px;
   border-radius: 100%;
@@ -151,7 +147,7 @@ h1 {
   }
 }
 
-.hand {
+.az-watch_hand {
   background: var(--gray);
   height: 78px;
   position: absolute;
@@ -162,14 +158,14 @@ h1 {
   box-shadow: .1px .1px 10px var(--blueScreen);
 }
 
-.seconds-hand {
+.az-watch_seconds-hand {
   background-color: var(--red);
   width: 1px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
-.hours-hand {
+.az-watch_hours-hand {
   height: 30%;
   width: 4px;
   top: 20%;
@@ -182,7 +178,7 @@ h1 {
   border-top-left-radius: 5px;
 }
 
-.minutes-hand {
+.az-watch_minutes-hand {
   height: 78px;
   width: 3px;
   background: var(--radiant);
@@ -194,7 +190,7 @@ h1 {
   border-top-left-radius: 5px;
 }
 
-.digital_clock {
+.az-watch_digital_clock {
   color: #5d6d7e;
   font-weight: 100;
   position: absolute;
@@ -202,33 +198,33 @@ h1 {
   top: 40.5%;
 }
 
-.number {
+.az-watch_number {
   color: var(--gray);
   position: absolute;
   font-size: 11px;
 }
 
-.twelve {
+.az-watch_number-twelve {
   left: 75.5px;
   top: 3px;
 }
 
-.three {
+.az-watch_number-three {
   right: 3px;
   top: 78px;
 }
 
-.six {
+.az-watch_number-six {
   left: 79px;
   bottom: 3px;
 }
 
-.nine {
+.az-watch_number-nine {
   left: 3px;
   top: 78px;
 }
 
-.day_date {
+.az-watch_calendar {
   position: absolute;
   font-weight: 100;
   bottom: 40.5%;
@@ -237,15 +233,15 @@ h1 {
   letter-spacing: 1.5px;
 }
 
-.day {
+.az-watch_calendar_day {
   color: var(--gray);
 }
 
-.date {
+.az-watch_calendar_date {
   color: var(--red);
 }
 
-.location {
+.az-watch_location {
   color: #fff;
   font-size: 24px;
   letter-spacing: 1px;

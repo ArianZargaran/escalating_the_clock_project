@@ -29,7 +29,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 60px;
-  font-family: "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 14px;
   font-weight: 100; }
 
@@ -43,12 +43,8 @@ h1 {
   font-family: "Dancing Script", cursive;
   font-weight: 100; }
 
-/* line 39, main.scss */
-.js_container {
-  padding: 20px 0; }
-
-/* line 44, main.scss */
-.apple-watch-container {
+/* line 40, main.scss */
+.az-watches_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,13 +61,13 @@ h1 {
           flex-direction: row;
   width: 80%; }
 
-/* line 53, main.scss */
-.watch-wrapper {
+/* line 49, main.scss */
+.az-watch_wrapper {
   padding: 10px 15px;
   margin: 1px; }
 
-/* line 59, main.scss */
-.apple-watch {
+/* line 55, main.scss */
+.az-watch {
   background: var(--greyWatchFrame);
   width: 230px;
   height: 269px;
@@ -82,8 +78,8 @@ h1 {
   border: 1px solid var(--greyWatchFrameBorder);
   position: relative; }
 
-/* line 69, main.scss */
-.apple-watch::before {
+/* line 65, main.scss */
+.az-watch::before {
   content: "";
   display: block;
   width: 16px;
@@ -95,8 +91,8 @@ h1 {
   background: var(--greyWatchFrame);
   border: 1px solid var(--greyWatchFrameBorder); }
 
-/* line 81, main.scss */
-.apple-watch::after {
+/* line 77, main.scss */
+.az-watch::after {
   content: "";
   display: block;
   width: 5px;
@@ -108,8 +104,8 @@ h1 {
   background: var(--greyWatchFrame);
   border: 1px solid var(--greyWatchFrameBorder); }
 
-/* line 93, main.scss */
-.apple-watch__screen {
+/* line 89, main.scss */
+.az-watch_screen {
   background: var(--blueScreen);
   height: 100%;
   border-radius: 35px;
@@ -118,8 +114,8 @@ h1 {
   padding: 28px;
   overflow: hidden; }
 
-/* line 103, main.scss */
-.clock {
+/* line 99, main.scss */
+.az-watch_analog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,189 +128,189 @@ h1 {
   height: 200px;
   border-radius: 10%; }
 
-/* line 111, main.scss */
-.dials {
+/* line 107, main.scss */
+.az-watch_dials {
   height: 180px;
   width: 180px;
   border-radius: 100%;
   position: absolute; }
 
-/* line 118, main.scss */
-.dial {
+/* line 114, main.scss */
+.az-watch_dial {
   position: absolute;
   width: 100%;
   height: 0.7px;
   background: var(--gray);
   top: 50%; }
 
-/* line 127, main.scss */
-.dial_0 {
+/* line 123, main.scss */
+.az-watch_dial-0 {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg); }
 
-/* line 127, main.scss */
-.dial_1 {
+/* line 123, main.scss */
+.az-watch_dial-1 {
   -webkit-transform: rotate(6deg);
           transform: rotate(6deg); }
 
-/* line 127, main.scss */
-.dial_2 {
+/* line 123, main.scss */
+.az-watch_dial-2 {
   -webkit-transform: rotate(12deg);
           transform: rotate(12deg); }
 
-/* line 127, main.scss */
-.dial_3 {
+/* line 123, main.scss */
+.az-watch_dial-3 {
   -webkit-transform: rotate(18deg);
           transform: rotate(18deg); }
 
-/* line 127, main.scss */
-.dial_4 {
+/* line 123, main.scss */
+.az-watch_dial-4 {
   -webkit-transform: rotate(24deg);
           transform: rotate(24deg); }
 
-/* line 127, main.scss */
-.dial_5 {
+/* line 123, main.scss */
+.az-watch_dial-5 {
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg); }
 
-/* line 127, main.scss */
-.dial_6 {
+/* line 123, main.scss */
+.az-watch_dial-6 {
   -webkit-transform: rotate(36deg);
           transform: rotate(36deg); }
 
-/* line 127, main.scss */
-.dial_7 {
+/* line 123, main.scss */
+.az-watch_dial-7 {
   -webkit-transform: rotate(42deg);
           transform: rotate(42deg); }
 
-/* line 127, main.scss */
-.dial_8 {
+/* line 123, main.scss */
+.az-watch_dial-8 {
   -webkit-transform: rotate(48deg);
           transform: rotate(48deg); }
 
-/* line 127, main.scss */
-.dial_9 {
+/* line 123, main.scss */
+.az-watch_dial-9 {
   -webkit-transform: rotate(54deg);
           transform: rotate(54deg); }
 
-/* line 127, main.scss */
-.dial_10 {
+/* line 123, main.scss */
+.az-watch_dial-10 {
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg); }
 
-/* line 127, main.scss */
-.dial_11 {
+/* line 123, main.scss */
+.az-watch_dial-11 {
   -webkit-transform: rotate(66deg);
           transform: rotate(66deg); }
 
-/* line 127, main.scss */
-.dial_12 {
+/* line 123, main.scss */
+.az-watch_dial-12 {
   -webkit-transform: rotate(72deg);
           transform: rotate(72deg); }
 
-/* line 127, main.scss */
-.dial_13 {
+/* line 123, main.scss */
+.az-watch_dial-13 {
   -webkit-transform: rotate(78deg);
           transform: rotate(78deg); }
 
-/* line 127, main.scss */
-.dial_14 {
+/* line 123, main.scss */
+.az-watch_dial-14 {
   -webkit-transform: rotate(84deg);
           transform: rotate(84deg); }
 
-/* line 127, main.scss */
-.dial_15 {
+/* line 123, main.scss */
+.az-watch_dial-15 {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg); }
 
-/* line 127, main.scss */
-.dial_16 {
+/* line 123, main.scss */
+.az-watch_dial-16 {
   -webkit-transform: rotate(96deg);
           transform: rotate(96deg); }
 
-/* line 127, main.scss */
-.dial_17 {
+/* line 123, main.scss */
+.az-watch_dial-17 {
   -webkit-transform: rotate(102deg);
           transform: rotate(102deg); }
 
-/* line 127, main.scss */
-.dial_18 {
+/* line 123, main.scss */
+.az-watch_dial-18 {
   -webkit-transform: rotate(108deg);
           transform: rotate(108deg); }
 
-/* line 127, main.scss */
-.dial_19 {
+/* line 123, main.scss */
+.az-watch_dial-19 {
   -webkit-transform: rotate(114deg);
           transform: rotate(114deg); }
 
-/* line 127, main.scss */
-.dial_20 {
+/* line 123, main.scss */
+.az-watch_dial-20 {
   -webkit-transform: rotate(120deg);
           transform: rotate(120deg); }
 
-/* line 127, main.scss */
-.dial_21 {
+/* line 123, main.scss */
+.az-watch_dial-21 {
   -webkit-transform: rotate(126deg);
           transform: rotate(126deg); }
 
-/* line 127, main.scss */
-.dial_22 {
+/* line 123, main.scss */
+.az-watch_dial-22 {
   -webkit-transform: rotate(132deg);
           transform: rotate(132deg); }
 
-/* line 127, main.scss */
-.dial_23 {
+/* line 123, main.scss */
+.az-watch_dial-23 {
   -webkit-transform: rotate(138deg);
           transform: rotate(138deg); }
 
-/* line 127, main.scss */
-.dial_24 {
+/* line 123, main.scss */
+.az-watch_dial-24 {
   -webkit-transform: rotate(144deg);
           transform: rotate(144deg); }
 
-/* line 127, main.scss */
-.dial_25 {
+/* line 123, main.scss */
+.az-watch_dial-25 {
   -webkit-transform: rotate(150deg);
           transform: rotate(150deg); }
 
-/* line 127, main.scss */
-.dial_26 {
+/* line 123, main.scss */
+.az-watch_dial-26 {
   -webkit-transform: rotate(156deg);
           transform: rotate(156deg); }
 
-/* line 127, main.scss */
-.dial_27 {
+/* line 123, main.scss */
+.az-watch_dial-27 {
   -webkit-transform: rotate(162deg);
           transform: rotate(162deg); }
 
-/* line 127, main.scss */
-.dial_28 {
+/* line 123, main.scss */
+.az-watch_dial-28 {
   -webkit-transform: rotate(168deg);
           transform: rotate(168deg); }
 
-/* line 127, main.scss */
-.dial_29 {
+/* line 123, main.scss */
+.az-watch_dial-29 {
   -webkit-transform: rotate(174deg);
           transform: rotate(174deg); }
 
-/* line 130, main.scss */
-.dial_0, .dial_5, .dial_10, .dial_15, .dial_20, .dial_25 {
+/* line 126, main.scss */
+.az-watch_dial-0, .az-watch_dial-5, .az-watch_dial-10, .az-watch_dial-15, .az-watch_dial-20, .az-watch_dial-25 {
   background: var(--red); }
 
-/* line 132, main.scss */
-.dial_0, .dial_15 {
+/* line 128, main.scss */
+.az-watch_dial-0, .az-watch_dial-15 {
   height: 2px; }
 
-/* line 134, main.scss */
-.face {
+/* line 130, main.scss */
+.az-watch_face {
   height: 165px;
   width: 165px;
   border-radius: 100%;
   position: absolute;
   z-index: 1;
   background-color: var(--blueScreen); }
-  /* line 141, main.scss */
-  .face::after {
+  /* line 137, main.scss */
+  .az-watch_face::after {
     content: " ";
     z-index: 3;
     height: 6px;
@@ -325,8 +321,8 @@ h1 {
     top: 48%;
     left: 48%; }
 
-/* line 154, main.scss */
-.hand {
+/* line 150, main.scss */
+.az-watch_hand {
   background: var(--gray);
   height: 78px;
   position: absolute;
@@ -338,15 +334,15 @@ h1 {
   -webkit-box-shadow: 0.1px 0.1px 10px var(--blueScreen);
           box-shadow: 0.1px 0.1px 10px var(--blueScreen); }
 
-/* line 165, main.scss */
-.seconds-hand {
+/* line 161, main.scss */
+.az-watch_seconds-hand {
   background-color: var(--red);
   width: 1px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
-/* line 172, main.scss */
-.hours-hand {
+/* line 168, main.scss */
+.az-watch_hours-hand {
   height: 30%;
   width: 4px;
   top: 20%;
@@ -358,8 +354,8 @@ h1 {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
-/* line 185, main.scss */
-.minutes-hand {
+/* line 181, main.scss */
+.az-watch_minutes-hand {
   height: 78px;
   width: 3px;
   background: var(--radiant);
@@ -370,42 +366,42 @@ h1 {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px; }
 
-/* line 197, main.scss */
-.digital_clock {
+/* line 193, main.scss */
+.az-watch_digital_clock {
   color: #5d6d7e;
   font-weight: 100;
   position: absolute;
   right: 9%;
   top: 40.5%; }
 
-/* line 205, main.scss */
-.number {
+/* line 201, main.scss */
+.az-watch_number {
   color: var(--gray);
   position: absolute;
   font-size: 11px; }
 
-/* line 211, main.scss */
-.twelve {
+/* line 207, main.scss */
+.az-watch_number-twelve {
   left: 75.5px;
   top: 3px; }
 
-/* line 216, main.scss */
-.three {
+/* line 212, main.scss */
+.az-watch_number-three {
   right: 3px;
   top: 78px; }
 
-/* line 221, main.scss */
-.six {
+/* line 217, main.scss */
+.az-watch_number-six {
   left: 79px;
   bottom: 3px; }
 
-/* line 226, main.scss */
-.nine {
+/* line 222, main.scss */
+.az-watch_number-nine {
   left: 3px;
   top: 78px; }
 
-/* line 231, main.scss */
-.day_date {
+/* line 227, main.scss */
+.az-watch_calendar {
   position: absolute;
   font-weight: 100;
   bottom: 40.5%;
@@ -413,16 +409,16 @@ h1 {
   font-size: 12px;
   letter-spacing: 1.5px; }
 
-/* line 240, main.scss */
-.day {
+/* line 236, main.scss */
+.az-watch_calendar_day {
   color: var(--gray); }
 
-/* line 244, main.scss */
-.date {
+/* line 240, main.scss */
+.az-watch_calendar_date {
   color: var(--red); }
 
-/* line 248, main.scss */
-.location {
+/* line 244, main.scss */
+.az-watch_location {
   color: #fff;
   font-size: 24px;
   letter-spacing: 1px;
